@@ -13,6 +13,14 @@
 В классе `ListTasks` реализуется метод `CountDistinct<T>(List<T> list)`. Метод создаёт новый пустой список `unique`. Затем он перебирает все элементы входного списка и с помощью метода `Contains()` проверяет их наличие в списке `unique`. Если элемент встречается впервые, он добавляется. Итоговое количество уникальных элементов определяется через свойство `Count` списка `unique`.
 
 ### Тестирование
+<img width="292" height="202" alt="image" src="https://github.com/user-attachments/assets/c4b8fac6-eaa5-4842-a55b-75790ae9b9c6" />
+<br>
+<img width="290" height="183" alt="image" src="https://github.com/user-attachments/assets/04eb6bbd-0b5e-4ddb-886c-c8a6f59a30e2" />
+<br>
+<img width="143" height="53" alt="image" src="https://github.com/user-attachments/assets/409d3ba7-c2b4-46ce-a596-33fb880aedb0" />
+<br>
+<img width="284" height="162" alt="image" src="https://github.com/user-attachments/assets/99e03481-1459-4ce6-b322-ae35300df7c5" />
+
 
 # Задание 2
 
@@ -29,6 +37,10 @@
 После завершения поиска цикл проходит по временному списку и заменяет значения всех сохраненных узлов на `F`.
 
 ### Тестирование
+<img width="267" height="242" alt="image" src="https://github.com/user-attachments/assets/e1d8d9d6-8afa-4b22-95ab-ad2b4e552794" />
+<img width="272" height="248" alt="image" src="https://github.com/user-attachments/assets/ec7cd014-effa-43f2-add1-6204dabbffad" />
+<img width="315" height="293" alt="image" src="https://github.com/user-attachments/assets/44fad2d9-0d48-4efd-8270-793fcf69f3c4" />
+<img width="228" height="87" alt="image" src="https://github.com/user-attachments/assets/a521f50d-0ba9-4f5a-b72a-9804bf042141" />
 
 # Задание 3
 
@@ -50,6 +62,10 @@
 В зависимости от `count` культура распределяется в один из результирующих списков: `inAll` (если `count == N`), `inSome` (если `1 < count < N`) или `inOne` (если `count == 1`).
 
 ### Тестирование
+<img width="479" height="249" alt="image" src="https://github.com/user-attachments/assets/269ed3b9-7cde-4e94-9b0e-8396b62d060e" />
+<img width="476" height="235" alt="image" src="https://github.com/user-attachments/assets/2a5dc2b8-df02-4e1b-8a3b-ecf8eab343be" />
+<img width="453" height="209" alt="image" src="https://github.com/user-attachments/assets/8dbbbe91-dee4-4f6c-8969-c1b449a6034b" />
+<img width="411" height="95" alt="image" src="https://github.com/user-attachments/assets/7c73aab2-143a-4815-aeb4-5d37d058d82a" />
 
 # Задание 4
 
