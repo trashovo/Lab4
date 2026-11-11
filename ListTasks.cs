@@ -14,7 +14,6 @@ public static class ListTasks
                 unique.Add(item);
             }
         }
-
         return unique.Count;
     }
 
