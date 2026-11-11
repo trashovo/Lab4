@@ -44,6 +44,8 @@
 <img width="315" height="293" alt="image" src="https://github.com/user-attachments/assets/44fad2d9-0d48-4efd-8270-793fcf69f3c4" />
 <br>
 <img width="228" height="87" alt="image" src="https://github.com/user-attachments/assets/a521f50d-0ba9-4f5a-b72a-9804bf042141" />
+<br>
+<img width="246" height="76" alt="image" src="https://github.com/user-attachments/assets/e531813f-e938-47a5-9a33-36217f590501" />
 
 # Задание 3
 
@@ -72,6 +74,8 @@
 <img width="453" height="209" alt="image" src="https://github.com/user-attachments/assets/8dbbbe91-dee4-4f6c-8969-c1b449a6034b" />
 <br>
 <img width="411" height="95" alt="image" src="https://github.com/user-attachments/assets/7c73aab2-143a-4815-aeb4-5d37d058d82a" />
+<br>
+<img width="439" height="76" alt="image" src="https://github.com/user-attachments/assets/2d19c889-d896-41d2-bdeb-a36c7ca467c7" />
 
 # Задание 4
 
@@ -89,6 +93,14 @@
 Затем символы первого слова поочередно проверяются на вхождение в множества всех остальных слов. Если символ присутствует везде (флаг `inAllWords = true`), он добавляется в итоговый список `result`.
 
 ### Тестирование
+<img width="523" height="57" alt="image" src="https://github.com/user-attachments/assets/97b20872-d96a-4838-8f13-c2bb1dad8ed7" />
+<br>
+<img width="507" height="65" alt="image" src="https://github.com/user-attachments/assets/f3b2de0d-124a-4c7b-9045-d63e4ee0122f" />
+<br>
+<img width="299" height="49" alt="image" src="https://github.com/user-attachments/assets/2c5e183c-5e3a-4023-a72a-8266ea026140" />
+<br>
+<img width="511" height="57" alt="image" src="https://github.com/user-attachments/assets/50d757ef-ed0c-4512-9a62-f2118f923659" />
+
 
 # Задание 5
 
