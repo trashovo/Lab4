@@ -97,9 +97,9 @@
 <br>
 <img width="507" height="65" alt="image" src="https://github.com/user-attachments/assets/f3b2de0d-124a-4c7b-9045-d63e4ee0122f" />
 <br>
-<img width="299" height="49" alt="image" src="https://github.com/user-attachments/assets/2c5e183c-5e3a-4023-a72a-8266ea026140" />
-<br>
 <img width="511" height="57" alt="image" src="https://github.com/user-attachments/assets/50d757ef-ed0c-4512-9a62-f2118f923659" />
+<br>
+<img width="299" height="49" alt="image" src="https://github.com/user-attachments/assets/2c5e183c-5e3a-4023-a72a-8266ea026140" />
 
 
 # Задание 5
@@ -122,3 +122,8 @@
 * Бинарный оператор `-` перегружен для двух случаев (`Money - int` и `int - Money`), вычитаются копейки, а если результат уходит в минус, выдается ошибка.
 
 ### Тестирование
+<img width="468" height="818" alt="image" src="https://github.com/user-attachments/assets/5499ad1b-f49f-4761-b68a-4d0ea3cd5a98" />
+<br>
+<img width="531" height="781" alt="image" src="https://github.com/user-attachments/assets/b484a7fd-b253-48d6-b068-49a1aca2aaa4" />
+<br>
+<img width="369" height="225" alt="image" src="https://github.com/user-attachments/assets/fda3d902-00f5-4132-8057-be9330331ee4" />
