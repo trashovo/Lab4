@@ -69,5 +69,20 @@ namespace LAB
                 return count;
             }
         }
+        public string ReadString(string prompt)
+        {
+            while (true)
+            {
+                Console.Write(prompt);
+                string? input = Console.ReadLine();
+
+                if (!string.IsNullOrWhiteSpace(input))
+                {
+                    return input.Trim();
+                }
+
+                Console.WriteLine("Ошибка, строка не может быть пустой");
+            }
+        }
     }
 }

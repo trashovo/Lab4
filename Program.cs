@@ -53,7 +53,8 @@ namespace LAB
                         }
                         int uniqueCount = ListTasks.CountDistinct(myList);
                         Console.WriteLine($"\nВведенный список: {string.Join(", ", myList)}");
-                        Console.WriteLine($"Количество различных элементов: {uniqueCount}");
+                        
+                        Console.WriteLine($"Количество различных элементов: {uniqueCount}"); 
                         
                         Console.WriteLine("\nНажмите любую клавишу для выхода...");
                         Console.ReadKey();
@@ -82,13 +83,18 @@ namespace LAB
                             myList.AddLast(line.Trim());
                         }
                         Console.WriteLine($"\nИсходный список: {string.Join(", ", myList)}");
-
-                        Console.Write("\nВведите значение элемента E: ");
-                        string E = (Console.ReadLine() ?? "").Trim();
-
-                        Console.Write("Введите заменяющее значение F: ");
-                        string F = (Console.ReadLine() ?? "").Trim();
+                        string E;
+                        while (true)
+                        {
+                            E = check.ReadString("Введите значение E: ");
+                            if (myList.Contains(E))
+                            {
+                                break;
+                            }
+                            Console.WriteLine("Элемент отсутствует в списке");
+                        }
                         
+                        string F = check.ReadString("Введите F: ");
                         ListTasks.ReplaceUnequalNeighbors(myList, E, F);
 
                         Console.WriteLine($"\nСписок после замены: {string.Join(", ", myList)}");
@@ -106,8 +112,7 @@ namespace LAB
                         Console.WriteLine("\nВведите культуры для каждого кооператива через пробел:");
                         for (int i = 0; i < n; i++)
                         {
-                            Console.Write($"Кооператив #{i + 1}: ");
-                            string input = Console.ReadLine() ?? "";
+                            string input = check.ReadString($"Кооператив #{i + 1}: ");
                             
                             string[] parts = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
         
@@ -140,9 +145,7 @@ namespace LAB
                     }
                     case 4:
                     {
-                        Console.WriteLine("\nВведите текст на русском языке:");
-                        
-                        string text = Console.ReadLine() ?? "";
+                        string text = check.ReadString("Введите текст на русском языке: ");
                         
                         List<char> commonChars = ListTasks.FindCommonChars(text);
                         
@@ -152,7 +155,7 @@ namespace LAB
                         }
                         else
                         {
-                            Console.WriteLine("Символов, которые есть абсолютно во всех словах, не найдено.");
+                            Console.WriteLine("Символов не найдено (введено меньше двух слов или нет общих букв)");
                         }
                         Console.WriteLine("\nНажмите любую клавишу для выхода...");
                         Console.ReadKey();
@@ -161,13 +164,13 @@ namespace LAB
                     case 5:
                     {
                         Console.WriteLine("\nВвод первой суммы:");
-                        uint r1 = (uint)check.NewReadInt("Введите рубли (целое положительное число): ");
+                        uint r1 = (uint)check.ReadCount("Введите рубли (целое положительное число): ",0,0);
                         byte k1 = (byte)check.ReadCount("Введите копейки (0-255): ",0, 255);
                         Money m1 = new Money(r1, k1);
                         Console.WriteLine($"Сумма 1: {m1.ToString()}");
                         
                         Console.WriteLine("\nВвод второй суммы:");
-                        uint r2 = (uint)check.NewReadInt("Введите рубли (целое положительное число): ");
+                        uint r2 = (uint)check.ReadCount("Введите рубли (целое положительное число): ",0,0);
                         byte k2 = (byte)check.ReadCount("Введите копейки (0-255): ",0, 255);
                         Money m2 = new Money(r2, k2);
                         Console.WriteLine($"Сумма 2: {m2.ToString()}");
@@ -184,7 +187,8 @@ namespace LAB
                         try 
                         {
                             m1--;
-                            Console.WriteLine($"Вычли копейку: {m1.ToString()}");
+                            m1--;
+                            Console.WriteLine($"Вычли 2 копейки: {m1.ToString()}");
                         }
                         catch (Exception ex)
                         {
@@ -193,11 +197,12 @@ namespace LAB
                         
                         Console.WriteLine("Сумма 2");
                         m2++;
-                        Console.WriteLine($"После ++ (добавили копейку): {m2.ToString()}");
+                        Console.WriteLine($"Добавили копейку: {m2.ToString()}");
                         try 
                         {
                             m2--;
-                            Console.WriteLine($"Вычли копейку: {m2.ToString()}");
+                            m2--;
+                            Console.WriteLine($"Вычли 2 копейки: {m2.ToString()}");
                         }
                         catch (Exception ex)
                         {
@@ -220,6 +225,7 @@ namespace LAB
                         
                         Console.WriteLine("\nБинарные операции (вычитание копеек)");
                         int subtractAmount = check.ReadInt("Введите число: ");
+                        Console.WriteLine("Сумма 1");
                         try
                         {
                             Money res1 = m1 - subtractAmount;
@@ -233,6 +239,7 @@ namespace LAB
                             Console.WriteLine($"Ошибка при вычитании: {ex.Message}");
                         }
                         
+                        Console.WriteLine("Сумма 2");
                         try
                         {
                             Money res3 = m2 - subtractAmount;

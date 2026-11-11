@@ -1,5 +1,4 @@
 namespace LAB;
-
 public static class ListTasks
 {
     public static int CountDistinct<T>(List<T> list)
@@ -32,7 +31,7 @@ public static class ListTasks
                 nodesToReplace.Add(current.Previous);
                 nodesToReplace.Add(current.Next);
             }
-
+            
             current = current.Next;
         }
         foreach (LinkedListNode<string> node in nodesToReplace)
@@ -54,7 +53,7 @@ public static class ListTasks
         List<HashSet<string>> coopSets = new List<HashSet<string>>();
         
         HashSet<string> allUniqueCrops = new HashSet<string>();
-        
+
         for (int i = 0; i < n; i++)
         {
             HashSet<string> currentSet = new HashSet<string>(cooperatives[i]);
@@ -64,7 +63,7 @@ public static class ListTasks
                 allUniqueCrops.Add(crop);
             }
         }
-        
+
         foreach (string crop in allUniqueCrops)
         {
             int count = 0;
@@ -96,7 +95,7 @@ public static class ListTasks
         string[] words = text.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
         int totalWords = words.Length;
-        if (totalWords == 0) return result;
+        if (totalWords < 2) return result;
         
         List<HashSet<char>> wordSets = new List<HashSet<char>>();
         for (int i = 0; i < totalWords; i++)
