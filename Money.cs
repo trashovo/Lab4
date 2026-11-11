@@ -47,19 +47,19 @@ public class Money
         return this._rubles == other._rubles && this._kopeks == other._kopeks;
     }
 
-    private long TotalKopecks
+    private long TotalKopecks()
     {
-        get { return _rubles * 100L + _kopeks; }
+        return _rubles * 100L + _kopeks;
     }
     
     public static Money operator ++(Money m)
     {
-        return FromTotalKopecks(m.TotalKopecks + 1);
+        return FromTotalKopecks(m.TotalKopecks() + 1);
     }
     
     public static Money operator --(Money m)
     {
-        return FromTotalKopecks(m.TotalKopecks - 1);
+        return FromTotalKopecks(m.TotalKopecks() - 1);
     }
     
     public static implicit operator uint(Money m)
@@ -74,11 +74,11 @@ public class Money
     
     public static Money operator -(Money m, int kopeksToSubtract)
     {
-        return FromTotalKopecks(m.TotalKopecks - kopeksToSubtract);
+        return FromTotalKopecks(m.TotalKopecks() - kopeksToSubtract);
     }
 
     public static Money operator -(int kopeksToSubtract, Money m)
     {
-        return FromTotalKopecks(m.TotalKopecks - kopeksToSubtract);
+        return FromTotalKopecks(m.TotalKopecks() - kopeksToSubtract);
     }
 }
